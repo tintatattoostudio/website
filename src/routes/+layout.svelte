@@ -6,7 +6,7 @@
 	const year = new Date().getFullYear();
 </script>
 
-<main class="min-h-screen bg-white">
+<main class="flex min-h-screen flex-col justify-between bg-white">
 	<nav class="justify center mb-2 flex flex-col items-center">
 		<!-- Logo and language switcher -->
 		<div class="flex w-screen flex-row items-center justify-between p-4">

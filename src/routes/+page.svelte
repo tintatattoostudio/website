@@ -1,11 +1,8 @@
 <script lang="ts">
 	import { studio1, studio2, studio3 } from '$lib/assets/images/studio';
 	import Artist from '$lib/components/Artist.svelte';
-	import type { ArtistType } from '$lib/types';
+	import { artists } from '$lib/content';
 	import { Carousel } from 'flowbite-svelte';
-	import Lana from '$lib/assets/images/artists/lana/profile.png';
-	import Milly from '$lib/assets/images/artists/milly/profile.png';
-	import Tilen from '$lib/assets/images/artists/tilen/profile.png';
 
 	const images = [
 		{
@@ -22,24 +19,6 @@
 			alt: 'Studio 3',
 			src: studio3,
 			title: 'studio3',
-		},
-	];
-
-	const artists: ArtistType[] = [
-		{
-			name: 'Lana',
-			image: Lana,
-			styles: 'Linework, illustrative, blackwork',
-		},
-		{
-			name: 'Milly',
-			image: Milly,
-			styles: 'Realizem, linework',
-		},
-		{
-			name: 'Tilen',
-			image: Tilen,
-			styles: 'Realizem, abstraktni realizem',
 		},
 	];
 </script>
