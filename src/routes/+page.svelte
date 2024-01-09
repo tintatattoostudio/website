@@ -103,7 +103,7 @@
 				non nisi. Mollis nunc sed id semper risus. Sed cras ornare arcu dui vivamus arcu. At in
 				tellus integer feugiat scelerisque varius.
 			</p>
-			<div class="mb-8 grid grid-cols-3 gap-4 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1">
+			<div class="mb-8 grid grid-cols-2 gap-4 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1">
 				{#each artists as artist}
 					<Artist {artist} />
 				{/each}
@@ -136,8 +136,14 @@
 			<p class="text-2xl text-black">+386 40 123 456</p>
 			<br />
 			<p class="text-2xl text-black">
-				<a class="transition-all duration-150 hover:font-bold" href="">ig</a>
-				<a class="transition-all duration-150 hover:font-bold" href="">fb</a>
+				<a
+					class="transition-all duration-150 hover:font-bold"
+					href="https://www.instagram.com/tinta_tattoostudio/">ig</a
+				>
+				<a
+					class="transition-all duration-150 hover:font-bold"
+					href="https://www.facebook.com/profile.php?id=61554577949770">fb</a
+				>
 				<a class="transition-all duration-150 hover:font-bold" href="">tiktok</a>
 			</p>
 		</div>

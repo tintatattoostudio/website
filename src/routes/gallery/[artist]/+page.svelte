@@ -5,6 +5,10 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Galerija - {data.artist?.name}</title>
+</svelte:head>
+
 {#if data.artist}
 	<div class="h-full w-screen px-12 py-4">
 		<div class="flex flex-row items-center justify-start gap-4">

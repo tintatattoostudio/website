@@ -16,12 +16,12 @@ export const artists: ArtistType[] = [
 		styles: 'Realizem, linework',
 		gallery: 'milly',
 	},
-	{
-		name: 'Tilen',
-		image: Tilen,
-		styles: 'Realizem, abstraktni realizem',
-		gallery: 'tilen',
-	},
+	// {
+	// 	name: 'Tilen',
+	// 	image: Tilen,
+	// 	styles: 'Realizem, abstraktni realizem',
+	// 	gallery: 'tilen',
+	// },
 ];
 
 export const faq: FAQType[] = [

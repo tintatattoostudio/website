@@ -15,7 +15,7 @@
 			class="flex w-screen flex-row items-center justify-between bg-[url('/decors/navigation_bg.png')] bg-cover p-4"
 		>
 			<div class="w-24" />
-			<img src={logo} alt="Tinta Tattoo Logo" width="150" />
+			<img src={logo} alt="Tinta Tattoo Logo" width="350" />
 			<div class="w-24">SLO | ENG</div>
 		</div>
 		<!-- Navigation links -->
