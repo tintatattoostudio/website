@@ -4,3 +4,8 @@ export interface ArtistType {
 	styles: string;
 	gallery: string;
 }
+
+export interface FAQType {
+	question: string;
+	answer: string;
+}

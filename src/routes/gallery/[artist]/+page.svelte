@@ -9,7 +9,7 @@
 	<div class="h-full w-screen px-12 py-4">
 		<div class="flex flex-row items-center justify-start gap-4">
 			<img
-				class="w-32 rounded-full transition transition-all duration-200 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
+				class="w-32 rounded-full transition-all duration-200 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
 				src={data.artist.image}
 				alt={data.artist.name}
 			/>
@@ -27,7 +27,11 @@
 					class="columns-1 gap-3 sm:columns-2 sm:gap-4 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8"
 				>
 					{#each data.gallery as image}
-						<img class="rounded-lg" src={getImageUrl(image.attributes.url)} alt="Gallery item" />
+						<img
+							class="rounded-lg transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:cursor-pointer hover:opacity-80"
+							src={getImageUrl(image.attributes.url)}
+							alt="Gallery item"
+						/>
 					{/each}
 				</div>
 			</div>

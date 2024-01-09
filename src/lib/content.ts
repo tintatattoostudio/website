@@ -1,4 +1,4 @@
-import type { ArtistType } from './types';
+import type { ArtistType, FAQType } from './types';
 import Lana from '$lib/assets/images/artists/lana/profile.png';
 import Milly from '$lib/assets/images/artists/milly/profile.png';
 import Tilen from '$lib/assets/images/artists/tilen/profile.png';
@@ -21,5 +21,32 @@ export const artists: ArtistType[] = [
 		image: Tilen,
 		styles: 'Realizem, abstraktni realizem',
 		gallery: 'tilen',
+	},
+];
+
+export const faq: FAQType[] = [
+	{
+		question: 'Zakaj sem?',
+		answer: 'ker lahko',
+	},
+	{
+		question: 'Zakaj sem?',
+		answer: 'ker lahko',
+	},
+	{
+		question: 'Zakaj sem?',
+		answer: 'ker lahko',
+	},
+	{
+		question: 'Zakaj sem?',
+		answer: 'ker lahko',
+	},
+	{
+		question: 'Zakaj sem?',
+		answer: 'ker lahko',
+	},
+	{
+		question: 'Zakaj sem?',
+		answer: 'ker lahko',
 	},
 ];

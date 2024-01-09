@@ -11,7 +11,6 @@ export const load: PageLoad = async ({ params }) => {
 		return {
 			artist: artists.find((artist) => artist.gallery === params.artist),
 			gallery: gallery?.attributes.images.data,
-			// gallery: chunkArray(gallery?.attributes.images.data, 3),
 		};
 	}
 
