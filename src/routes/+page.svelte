@@ -4,7 +4,7 @@
 	import { Carousel } from 'flowbite-svelte';
 	// images
 	import logo from '$lib/assets/logo.png';
-	import { studio1, studio2, studio3 } from '$lib/assets/images/studio';
+	import { studio1, studio2, studio3, studio4, studio5, studio6 } from '$lib/assets/images/studio';
 	import aboutDecor from '$lib/assets/images/decors/about_blot.png';
 	import artistsDecor from '$lib/assets/images/decors/artists_blot.png';
 
@@ -23,6 +23,21 @@
 			alt: 'Studio 3',
 			src: studio3,
 			title: 'studio3',
+		},
+		{
+			alt: 'Studio 4',
+			src: studio4,
+			title: 'studio4',
+		},
+		{
+			alt: 'Studio 5',
+			src: studio5,
+			title: 'studio5',
+		},
+		{
+			alt: 'Studio 6',
+			src: studio6,
+			title: 'studio6',
 		},
 	];
 </script>
