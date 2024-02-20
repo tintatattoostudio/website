@@ -71,12 +71,8 @@
 			/>
 			<h1 class="relative z-10 font-serif text-5xl font-bold text-white">O nas</h1>
 		</div>
-		<!-- <h1
-			class="h-44 w-44 bg-[url('/decors/about_blot.png')] bg-contain bg-no-repeat text-5xl font-bold text-black"
-		>
-			O nas
 		</h1> -->
-		<p class="text-offblack relative z-10 text-lg leading-loose">
+		<p class="relative z-10 text-lg leading-loose text-offblack">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 			labore et dolore magna aliqua. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper
 			velit. Ut etiam sit amet nisl purus in mollis nunc sed. Faucibus nisl tincidunt eget nullam
@@ -96,7 +92,7 @@
 					Tetoverji
 				</h1>
 			</div>
-			<p class="text-offblack mb-8 text-lg">
+			<p class="mb-8 text-lg text-offblack">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 				labore et dolore magna aliqua. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper
 				velit. Ut etiam sit amet nisl purus in mollis nunc sed. Faucibus nisl tincidunt eget nullam

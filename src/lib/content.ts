@@ -26,7 +26,7 @@ export const artists: ArtistType[] = [
 
 export const faq: FAQType[] = [
 	{
-		question: 'Zakaj sem?',
+		question: 'Lokacija, cenik, delavnik, parkiranje',
 		answer: 'ker lahko',
 	},
 	{

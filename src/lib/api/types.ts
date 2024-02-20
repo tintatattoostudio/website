@@ -8,6 +8,26 @@ export interface Gallery {
 	};
 }
 
+export interface FAQ {
+	data: {
+		attributes: {
+			locale: string;
+			section: FAQSection[];
+		};
+	};
+}
+
+export interface FAQSection {
+	title: string;
+	content?: string;
+	qa: QA[];
+}
+
+export interface QA {
+	question: string;
+	answer: string;
+}
+
 export interface StrapiImage {
 	id: number;
 	attributes: {

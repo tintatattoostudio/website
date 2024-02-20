@@ -1,6 +1,9 @@
 <script lang="ts">
-	import { faq } from '$lib/content';
+	import { marked } from 'marked';
 	import { Accordion, AccordionItem } from 'flowbite-svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -8,14 +11,26 @@
 </svelte:head>
 
 <div class="mx-12">
-	<h1 class="text-offblack text-4xl font-bold">Pogosta vprašanja</h1>
+	<h1 class="text-4xl font-bold text-offblack">Pogosta vprašanja</h1>
 	<br />
-	<Accordion>
-		{#each faq as qa}
-			<AccordionItem>
-				<span slot="header">{qa.question}</span>
-				<p>{qa.answer}</p>
-			</AccordionItem>
-		{/each}
-	</Accordion>
+
+	{#each data.sections as section}
+		<h2 class="text-2xl font-bold text-offblack">{section.title}</h2>
+		{#if section.content}
+			<p class="text-offblack"></p>
+		{/if}
+		<div class="mb-2" />
+
+		<Accordion>
+			{#each section.qa as qa}
+				<AccordionItem>
+					<span slot="header">{qa.question}</span>
+					<p class="prose">
+						{@html marked.parse(qa.answer)}
+					</p>
+				</AccordionItem>
+			{/each}
+		</Accordion>
+		<div class="mb-8" />
+	{/each}
 </div>

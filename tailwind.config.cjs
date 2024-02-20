@@ -1,4 +1,5 @@
 const flowbite = require('flowbite/plugin');
+const typography = require('@tailwindcss/typography');
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
@@ -14,7 +15,7 @@ const config = {
 		},
 	},
 
-	plugins: [flowbite],
+	plugins: [flowbite, typography],
 };
 
 module.exports = config;
