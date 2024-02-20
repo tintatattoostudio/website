@@ -71,7 +71,6 @@
 			/>
 			<h1 class="relative z-10 font-serif text-5xl font-bold text-white">O nas</h1>
 		</div>
-		</h1> -->
 		<p class="relative z-10 text-lg leading-loose text-offblack">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 			labore et dolore magna aliqua. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper
