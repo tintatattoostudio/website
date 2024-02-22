@@ -13,7 +13,7 @@
 	<div class="h-full w-screen px-12 py-4">
 		<div class="flex flex-row items-center justify-start gap-4">
 			<img
-				class="w-32 rounded-full transition-all duration-200 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
+				class="h-32 w-32 rounded-full object-cover transition-all duration-200 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer"
 				src={data.artist.image}
 				alt={data.artist.name}
 			/>
