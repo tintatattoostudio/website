@@ -11,7 +11,7 @@ export interface Gallery {
 export interface FAQ {
 	data: {
 		attributes: {
-			locale: string;
+			locale: Locales;
 			section: FAQSection[];
 		};
 	};
@@ -36,13 +36,32 @@ export interface CareBase {
 
 export interface Care {
 	title: string;
-	locale: string;
+	locale: Locales;
 	sections: WebSegment[];
 }
 
 export interface WebSegment {
 	title: string;
 	content: string;
+}
+
+export interface LandingBase {
+	data: {
+		attributes: Landing;
+	};
+}
+
+export interface Landing {
+	aboutTitle: string;
+	aboutContent: string;
+	artistsTitle: string;
+	artistsContent: string;
+	locale: Locales;
+}
+
+export enum Locales {
+	SL = 'sl',
+	EN = 'en',
 }
 
 export interface StrapiImage {

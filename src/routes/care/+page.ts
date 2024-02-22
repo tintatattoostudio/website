@@ -5,6 +5,6 @@ export const load: PageLoad = async () => {
 	const care = await API.getCare();
 
 	return {
-		care: care,
+		care,
 	};
 };

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { marked } from 'marked';
-	import { Accordion, AccordionItem } from 'flowbite-svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;

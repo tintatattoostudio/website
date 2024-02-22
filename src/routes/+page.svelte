@@ -7,6 +7,7 @@
 	import { studio1, studio2, studio3, studio4, studio5, studio6 } from '$lib/assets/images/studio';
 	import aboutDecor from '$lib/assets/images/decors/about_blot.png';
 	import artistsDecor from '$lib/assets/images/decors/artists_blot.png';
+	import type { PageData } from './$types';
 
 	const images = [
 		{
@@ -40,6 +41,9 @@
 			title: 'studio6',
 		},
 	];
+
+	export let data: PageData;
+	const content = data.landing;
 </script>
 
 <svelte:head>
@@ -69,14 +73,12 @@
 				alt="About decoration"
 				class="absolute z-0 h-56 w-auto -translate-x-48"
 			/>
-			<h1 class="relative z-10 font-serif text-5xl font-bold text-white">O nas</h1>
+			<h1 class="relative z-10 font-serif text-5xl font-bold text-white">
+				{content.aboutTitle}
+			</h1>
 		</div>
 		<p class="relative z-10 text-lg leading-loose text-offblack">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-			labore et dolore magna aliqua. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper
-			velit. Ut etiam sit amet nisl purus in mollis nunc sed. Faucibus nisl tincidunt eget nullam
-			non nisi. Mollis nunc sed id semper risus. Sed cras ornare arcu dui vivamus arcu. At in tellus
-			integer feugiat scelerisque varius.
+			{@html content.aboutContent}
 		</p>
 	</div>
 
@@ -84,19 +86,14 @@
 		class=" flex min-h-[90vh] flex-col items-center justify-end bg-gray-100 bg-[url('/decors/decor_bg.png')] bg-cover"
 	>
 		<div id="artists" class="mx-12 my-4 flex flex-col gap-8">
-			<!-- <h1 class="w-full text-center text-5xl font-bold text-black">Tetoverji</h1> -->
 			<div class="relative flex translate-y-[-180%] items-center justify-center">
 				<img src={artistsDecor} alt="Artists decoration" class="absolute z-0 h-96 w-auto" />
 				<h1 class="relative z-10 w-full text-center font-serif text-7xl font-bold text-white">
-					Tetoverji
+					{content.artistsTitle}
 				</h1>
 			</div>
 			<p class="mb-8 text-lg text-offblack">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-				labore et dolore magna aliqua. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper
-				velit. Ut etiam sit amet nisl purus in mollis nunc sed. Faucibus nisl tincidunt eget nullam
-				non nisi. Mollis nunc sed id semper risus. Sed cras ornare arcu dui vivamus arcu. At in
-				tellus integer feugiat scelerisque varius.
+				{@html content.artistsContent}
 			</p>
 			<div class="mb-8 grid grid-cols-2 gap-4 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1">
 				{#each artists as artist}
@@ -111,7 +108,7 @@
 	>
 		<div class="">
 			<iframe
-				title="Tattoo studio location"
+				title="Tattoo Studio Location"
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.177745627873!2d14.470670277030784!3d46.06749689298307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477acd5200d57a59%3A0xd614356aea33f419!2sKaringerjeva%20ulica%208%2C%201000%20Ljubljana!5e0!3m2!1sen!2ssi!4v1704786011626!5m2!1sen!2ssi"
 				width="600"
 				height="450"
