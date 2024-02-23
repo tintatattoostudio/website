@@ -2,12 +2,7 @@ const routes = [
 	{
 		name: 'O nas',
 		nameEng: 'About',
-		link: '/#about',
-	},
-	{
-		name: 'Umetniki',
-		nameENG: 'Artists',
-		link: '/#artists',
+		link: '/',
 	},
 	{
 		name: 'Nega in tetoviranje',
