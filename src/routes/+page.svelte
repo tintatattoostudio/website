@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<!-- MOBILE -->
-	<div class="min-h-100vh relative hidden flex-col items-center justify-center max-[713px]:flex">
+	<div class="relative hidden min-h-[100vh] flex-col items-center justify-center max-[713px]:flex">
 		<img
 			src={decorBg}
 			alt="Decor background"
