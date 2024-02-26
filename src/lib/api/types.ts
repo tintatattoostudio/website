@@ -30,6 +30,19 @@ export interface Care {
 	sections: WebSegment[];
 }
 
+export interface InstructionsBase {
+	data: {
+		attributes: Instructions;
+	};
+}
+
+export interface Instructions {
+	title: string;
+	content: string;
+	locale: Locales;
+	segments: WebSegment[];
+}
+
 export interface WebSegment {
 	title: string;
 	content: string;

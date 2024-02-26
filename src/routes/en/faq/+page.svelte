@@ -11,7 +11,7 @@
 </svelte:head>
 
 <div class="mx-12">
-	<h1 class="text-4xl font-bold text-offblack">Pogosta vprašanja</h1>
+	<h1 class="text-4xl font-bold text-offblack">Frequently Asked Questions</h1>
 	<br />
 
 	{#each data.sections as section}
@@ -25,7 +25,7 @@
 			{#each section.qa as qa}
 				<AccordionItem>
 					<span slot="header">{qa.question}</span>
-					<p class="prose">
+					<p class="prose max-w-none">
 						{@html marked.parse(qa.answer)}
 					</p>
 				</AccordionItem>

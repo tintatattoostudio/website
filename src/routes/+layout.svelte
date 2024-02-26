@@ -3,16 +3,22 @@
 	import logo from '$lib/assets/logo.png';
 	import routes from '$lib/routes';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
 	function setLocale(locale: string) {
 		window.localStorage.setItem('locale', locale);
-		window.location.reload();
+		goto(locale === 'en' ? '/en' : '/sl');
+		if (locale === 'en') isEng = true;
+		if (locale === 'sl') isEng = false;
 	}
 
 	onMount(() => {
 		const current = window.localStorage.getItem('locale');
 		if (current === 'en') {
 			isEng = true;
+			goto('/en');
+		} else {
+			goto('/sl');
 		}
 	});
 
@@ -47,8 +53,9 @@
 		>
 			<div class="flex w-10/12 flex-row items-center justify-evenly px-24 text-gray-700">
 				{#each routes as route, i}
-					<a class="transition-all duration-150 hover:font-bold" href={route.link}
-						>{isEng ? route.nameEng : route.name}</a
+					<a
+						class="transition-all duration-150 hover:font-bold"
+						href={isEng ? route.linkEng : route.link}>{isEng ? route.nameEng : route.name}</a
 					>
 					{#if i < routes.length - 1}
 						<p class="mx-2">|</p>
