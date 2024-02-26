@@ -2,6 +2,21 @@
 	import '../app.pcss';
 	import logo from '$lib/assets/logo.png';
 	import routes from '$lib/routes';
+	import { onMount } from 'svelte';
+
+	function setLocale(locale: string) {
+		window.localStorage.setItem('locale', locale);
+		window.location.reload();
+	}
+
+	onMount(() => {
+		const current = window.localStorage.getItem('locale');
+		if (current === 'en') {
+			isEng = true;
+		}
+	});
+
+	let isEng = false;
 
 	const year = new Date().getFullYear();
 </script>
@@ -16,7 +31,15 @@
 		>
 			<div class="w-24" />
 			<img src={logo} alt="Tinta Tattoo Logo" width="350" />
-			<div class="w-24">SLO | ENG</div>
+			<div class="w-24">
+				<button on:click={() => setLocale('sl')} class="transition-all duration-150 hover:font-bold"
+					>SLO</button
+				>
+				|
+				<button on:click={() => setLocale('en')} class="transition-all duration-150 hover:font-bold"
+					>ENG</button
+				>
+			</div>
 		</div>
 		<!-- Navigation links -->
 		<div
@@ -24,7 +47,9 @@
 		>
 			<div class="flex w-10/12 flex-row items-center justify-evenly px-24 text-gray-700">
 				{#each routes as route, i}
-					<a class="transition-all duration-150 hover:font-bold" href={route.link}>{route.name}</a>
+					<a class="transition-all duration-150 hover:font-bold" href={route.link}
+						>{isEng ? route.nameEng : route.name}</a
+					>
 					{#if i < routes.length - 1}
 						<p class="mx-2">|</p>
 					{/if}

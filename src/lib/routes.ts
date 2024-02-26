@@ -9,14 +9,9 @@ const routes = [
 		nameEng: 'Care and tattooing',
 		link: '/care',
 	},
-	// {
-	// 	name: 'Trgovina',
-	// 	nameENG: 'Store',
-	// 	link: '/store',
-	// },
 	{
 		name: 'Pogosta vprašanja',
-		nameENG: 'FAQ',
+		nameEng: 'FAQ',
 		link: '/faq',
 	},
 ];

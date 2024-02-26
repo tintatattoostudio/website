@@ -6,10 +6,10 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import decorBg from '$lib/assets/images/decors/decor_bg.png';
 	import Artist from '$lib/components/Artist.svelte';
-	import { artists } from '$lib/content';
 
 	export let data: PageData;
 	const content = data.landing;
+	const artists = data.artists;
 </script>
 
 <svelte:head>
@@ -29,7 +29,7 @@
 		/>
 		<div class="relative">
 			<About {content} />
-			<Artists {content} />
+			<Artists {content} {artists} />
 		</div>
 	</div>
 	<!-- MOBILE -->
@@ -45,7 +45,7 @@
 			<h1 class="mt-4 text-4xl font-bold">{content.artistsTitle}</h1>
 			<p>{@html content.artistsContent}</p>
 			<div class="max-[]:grid-cols-2 mb-8 grid grid-cols-1 gap-4">
-				{#each artists as artist}
+				{#each data.artists as artist}
 					<Artist {artist} />
 				{/each}
 			</div>

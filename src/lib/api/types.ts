@@ -1,13 +1,3 @@
-export interface Gallery {
-	id: number;
-	attributes: {
-		artist: string;
-		images: {
-			data: StrapiImage[];
-		};
-	};
-}
-
 export interface FAQ {
 	data: {
 		attributes: {
@@ -57,6 +47,22 @@ export interface Landing {
 	artistsTitle: string;
 	artistsContent: string;
 	locale: Locales;
+}
+
+export interface Artist {
+	attributes: {
+		artist: string;
+		name: string;
+		bio: string;
+		styles: string;
+		pfp: {
+			data: StrapiImage;
+		};
+		images?: {
+			data: StrapiImage[];
+		};
+		locales: Locales;
+	};
 }
 
 export enum Locales {

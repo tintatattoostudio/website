@@ -1,10 +1,11 @@
 <script lang="ts">
 	import type { Landing } from '$lib/api/types';
 	import Artist from '$lib/components/Artist.svelte';
-	import { artists } from '$lib/content';
+	import type { Artist as ArtistTpe } from '$lib/api/types';
 	import artistsDecor from '$lib/assets/images/decors/artists_blot.png';
 
 	export let content: Landing;
+	export let artists: ArtistTpe[];
 </script>
 
 <div id="artists" class="mx-12 my-4 flex translate-y-[20%] flex-col gap-8">
