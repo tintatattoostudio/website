@@ -6,8 +6,8 @@ const routes = [
 		linkEng: '/en/',
 	},
 	{
-		name: 'Nega in tetoviranje',
-		nameEng: 'Care and tattooing',
+		name: 'Nega',
+		nameEng: 'Care ',
 		link: '/sl/care',
 		linkEng: '/en/care',
 	},
@@ -18,7 +18,7 @@ const routes = [
 		linkEng: '/en/instructions',
 	},
 	{
-		name: 'Pogosta vprašanja',
+		name: 'FAQ',
 		nameEng: 'FAQ',
 		link: '/sl/faq',
 		linkEng: '/en/faq',
