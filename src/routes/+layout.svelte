@@ -20,15 +20,24 @@
 		} else {
 			goto('/sl');
 		}
+
+		setInterval(() => (loading = false), 3000);
 	});
 
 	let isEng = false;
+	let loading = true;
 
 	const year = new Date().getFullYear();
 </script>
 
+<main class={`${loading ? '' : 'hidden'} flex h-screen w-screen items-center justify-center`}>
+	<img src={logo} class="w-[20vw] animate-pulse" alt="Tinta logo" />
+</main>
+
 <main
-	class="flex min-h-screen w-screen max-w-full flex-col justify-between overflow-x-hidden bg-white"
+	class={`${
+		loading ? 'hidden' : ''
+	} flex min-h-screen w-screen max-w-full flex-col justify-between overflow-x-hidden bg-white`}
 >
 	<nav class="justify center mb-2 flex flex-col items-center">
 		<!-- Logo and language switcher -->

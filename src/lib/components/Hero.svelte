@@ -1,7 +1,20 @@
 <script lang="ts">
 	import { Carousel } from 'flowbite-svelte';
 	// images
-	import { studio1, studio2, studio3, studio4, studio5, studio6 } from '$lib/assets/images/studio';
+	import {
+		studio1,
+		studio2,
+		studio3,
+		studio4,
+		studio5,
+		studio6,
+		studio7,
+		studio8,
+		studio9,
+		studio10,
+		studio11,
+		studio12,
+	} from '$lib/assets/images/studio';
 
 	const images = [
 		{
@@ -34,12 +47,42 @@
 			src: studio6,
 			title: 'studio6',
 		},
+		{
+			alt: 'Studio 7',
+			src: studio7,
+			title: 'studio7',
+		},
+		{
+			alt: 'Studio 8',
+			src: studio8,
+			title: 'studio8',
+		},
+		{
+			alt: 'Studio 9',
+			src: studio9,
+			title: 'studio9',
+		},
+		{
+			alt: 'Studio 10',
+			src: studio10,
+			title: 'studio10',
+		},
+		{
+			alt: 'Studio 11',
+			src: studio11,
+			title: 'studio11',
+		},
+		{
+			alt: 'Studio 12',
+			src: studio12,
+			title: 'studio12',
+		},
 	];
 </script>
 
 <div class="h-5/6 p-2">
 	<Carousel
-		class="h-[50vh] sm:h-[50vh] xl:h-[50vh] 2xl:h-[50vh]"
+		class="h-[65vh] sm:h-[65vh] xl:h-[65vh] 2xl:h-[65vh]"
 		{images}
 		imgClass="h-full"
 		let:Controls
