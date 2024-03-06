@@ -65,6 +65,9 @@
 	</nav>
 	<slot />
 	<footer class="flex flex-row items-center justify-center bg-black p-4 text-white">
-		<p>Tinta Tattoo © {year} | Vzdržuje <a href="https://aerio.tech">Aerio</a></p>
+		<p>
+			Tinta Tattoo © {year} | {isEng ? 'Maintained by' : 'Vzdržuje'}
+			<a href="https://aerio.tech">Aerio</a>
+		</p>
 	</footer>
 </main>
