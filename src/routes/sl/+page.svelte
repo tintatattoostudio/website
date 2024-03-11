@@ -20,7 +20,7 @@
 	<Hero />
 	<!-- DESKTOP -->
 	<div
-		class="relative flex min-h-[100vh] flex-col items-center justify-start overflow-hidden bg-gray-100 max-[1606px]:min-h-[110vh] max-[1103px]:min-h-[120vh] max-[712px]:hidden"
+		class="relative flex min-h-[170vh] flex-col items-center justify-start overflow-hidden bg-gray-100 pb-64 max-[1606px]:min-h-[175vh] max-[1103px]:min-h-[200vh] max-[821px]:hidden"
 	>
 		<img
 			src={decorBg}
@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<!-- MOBILE -->
-	<div class="relative hidden min-h-[100vh] flex-col items-center justify-center max-[713px]:flex">
+	<div class="relative hidden min-h-[100vh] flex-col items-center justify-center max-[820px]:flex">
 		<img
 			src={decorBg}
 			alt="Decor background"
@@ -44,9 +44,9 @@
 			<p>{@html content.aboutContent}</p>
 			<h1 class="mt-4 text-4xl font-bold">{content.artistsTitle}</h1>
 			<p>{@html content.artistsContent}</p>
-			<div class="max-[]:grid-cols-2 mb-8 grid grid-cols-1 gap-4">
+			<div class="mb-8 flex flex-col items-center justify-center gap-4">
 				{#each data.artists as artist}
-					<Artist {artist} />
+					<Artist {artist} displayGallery={true} />
 				{/each}
 			</div>
 		</div>

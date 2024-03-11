@@ -78,6 +78,12 @@ export interface Artist {
 	};
 }
 
+export interface CarouselImageType {
+	alt: string;
+	src: string;
+	title: string;
+}
+
 export enum Locales {
 	SL = 'sl',
 	EN = 'en',

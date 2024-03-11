@@ -63,7 +63,7 @@ module API {
 
 	export async function getArtists(en: boolean): Promise<Artist[]> {
 		const locale = en ? '&locale=en' : '';
-		const data = await axiosInstance.get<{ data: Artist[] }>(`/galleries?populate=pfp${locale}`);
+		const data = await axiosInstance.get<{ data: Artist[] }>(`/galleries?populate=deep${locale}`);
 
 		return data.data.data;
 	}

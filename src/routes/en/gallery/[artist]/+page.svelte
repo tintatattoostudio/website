@@ -1,6 +1,5 @@
 <script lang="ts">
 	import API from '$lib/api/client';
-	import { getImageUrl } from '$lib/utils';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -37,7 +36,7 @@
 					{#each artist.attributes.images.data as image}
 						<img
 							class="rounded-lg transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:cursor-pointer hover:opacity-80"
-							src={getImageUrl(image.attributes.url)}
+							src={API.getImageUrl(image.attributes.url)}
 							alt="Gallery item"
 						/>
 					{/each}
