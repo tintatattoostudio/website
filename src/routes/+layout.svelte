@@ -59,7 +59,7 @@
 		<div
 			class="flex w-screen flex-row items-center justify-center border border-l-0 border-r-0 border-gray-400 p-2"
 		>
-			<div class="flex w-10/12 flex-row items-center justify-evenly px-24 text-gray-700">
+			<div class="px-18 flex w-[90%] flex-row items-center justify-evenly text-gray-700">
 				{#each routes as route, i}
 					<a
 						class="text-center transition-all duration-150 hover:font-bold"
