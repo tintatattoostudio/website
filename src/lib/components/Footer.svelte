@@ -1,5 +1,7 @@
 <script lang="ts">
 	import logo from '$lib/assets/logo.png';
+	import ig from '$lib/assets/icons/instagram.svg';
+	import fb from '$lib/assets/icons/facebook.svg';
 </script>
 
 <div
@@ -9,21 +11,25 @@
 		<img src={logo} class="h-auto max-h-96" alt="Tinta logo" />
 		<p class="text-2xl text-black">Karingerjeva ulica 8, 1000 Ljubljana</p>
 		<br />
-		<p class="text-2xl text-black">mail@tinta.tattoo</p>
-		<br />
-		<p class="text-2xl text-black">+386 40 123 456</p>
-		<br />
 		<p class="text-2xl text-black">
+			<a href="mailto:tattoostudio.tinta@gmail.com">tattoostudio.tinta@gmail.com</a>
+		</p>
+		<br />
+		<div class="flex flex-row items-center justify-center gap-4">
 			<a
 				class="transition-all duration-150 hover:font-bold"
-				href="https://www.instagram.com/tinta_tattoostudio/">ig</a
+				href="https://www.instagram.com/tinta_tattoostudio/"
+				target="_blank"
+				><img src={ig} alt="Instagram logo" class="h-8 transition-all duration-150 hover:h-10" /></a
 			>
 			<a
 				class="transition-all duration-150 hover:font-bold"
-				href="https://www.facebook.com/profile.php?id=61554577949770">fb</a
+				href="https://www.facebook.com/profile.php?id=61554577949770"
+				target="_blank"
+				><img src={fb} alt="Instagram logo" class="h-8 transition-all duration-150 hover:h-10" /></a
 			>
 			<!-- <a class="transition-all duration-150 hover:font-bold" href="">tiktok</a> -->
-		</p>
+		</div>
 	</div>
 	<div class="px-20">
 		<iframe

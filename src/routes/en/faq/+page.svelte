@@ -11,21 +11,21 @@
 </svelte:head>
 
 <div class="mx-12">
-	<h1 class="text-4xl font-bold text-offblack">Frequently Asked Questions</h1>
+	<h1 class="my-8 text-5xl font-bold text-offblack">Pogosta vprašanja</h1>
 	<br />
 
 	{#each data.sections as section}
-		<h2 class="text-2xl font-bold text-offblack">{section.title}</h2>
+		<h2 class="text-3xl font-bold text-offblack">{section.title}</h2>
 		{#if section.content}
-			<p class="text-offblack"></p>
+			<p class="mt-2 text-xl text-offblack">{section.content}</p>
 		{/if}
 		<div class="mb-2" />
 
 		<Accordion>
 			{#each section.qa as qa}
 				<AccordionItem>
-					<span slot="header">{qa.question}</span>
-					<p class="prose max-w-none">
+					<span slot="header" class="text-xl">{qa.question}</span>
+					<p class="prose max-w-none text-xl">
 						{@html marked.parse(qa.answer)}
 					</p>
 				</AccordionItem>

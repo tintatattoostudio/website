@@ -1,5 +1,6 @@
 const flowbite = require('flowbite/plugin');
 const typography = require('@tailwindcss/typography');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
@@ -9,7 +10,11 @@ const config = {
 	],
 
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				pacifico: ['Pacifico', ...defaultTheme.fontFamily.mono],
+			},
+		},
 		colors: {
 			offblack: '#404040',
 		},

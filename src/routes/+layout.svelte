@@ -34,6 +34,10 @@
 	<img src={logo} class="w-[20vw] animate-pulse" alt="Tinta logo" />
 </main>
 
+<svelte:head>
+	<title>Tinta Tattoo</title>
+</svelte:head>
+
 <main
 	class={`${
 		loading ? 'hidden' : ''

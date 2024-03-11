@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<div class="mb-4 border border-b-2 border-l-0 border-r-0 border-t-0 border-gray-400 py-2" />
-		<p>{artist?.attributes.bio}</p>
+		<p class="text-xl">{artist?.attributes.bio}</p>
 		<div class="mb-4 border border-b-2 border-l-0 border-r-0 border-t-0 border-gray-400 py-2" />
 
 		<!-- Gallery UI -->
