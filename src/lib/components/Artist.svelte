@@ -48,7 +48,7 @@
 		/>
 		<div class="flex flex-col items-center justify-center">
 			<p class="text-2xl font-bold text-offblack">{artist.attributes.name}</p>
-			<p class="text-offblack">{artist.attributes.styles}</p>
+			<p class="text-center text-offblack">{artist.attributes.styles}</p>
 		</div>
 	</a>
 	<div>
