@@ -10,7 +10,7 @@
 </svelte:head>
 
 <div class="flex w-screen flex-col px-12 pb-24 md:px-60">
-	<h1 class="mb-8 mt-12 text-5xl font-bold text-offblack">{data?.care?.title}</h1>
+	<h1 class="mb-8 mt-12 break-words text-5xl font-bold text-offblack">{data?.care?.title}</h1>
 	<p class="text-xl text-offblack">{data?.care?.content}</p>
 	<br />
 
