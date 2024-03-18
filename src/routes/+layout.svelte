@@ -30,13 +30,13 @@
 	const year = new Date().getFullYear();
 </script>
 
-<main class={`${loading ? '' : 'hidden'} flex h-screen w-screen items-center justify-center`}>
-	<img src={logo} class="w-[20vw] animate-pulse" alt="Tinta logo" />
-</main>
-
 <svelte:head>
 	<title>Tinta Tattoo</title>
 </svelte:head>
+
+<main class={`${loading ? '' : 'hidden'} flex h-screen w-screen items-center justify-center`}>
+	<img src={logo} class="w-[20vw] animate-pulse" alt="Tinta logo" />
+</main>
 
 <main
 	class={`${
