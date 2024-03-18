@@ -8,14 +8,14 @@
 	export let artists: ArtistTpe[];
 </script>
 
-<div id="artists" class="mx-12 my-4 flex translate-y-[20%] flex-col gap-8">
+<div id="artists" class="mx-12 mb-4 mt-48 flex flex-col gap-8 max-[1000px]:mt-64">
 	<div class="relative flex items-center justify-center">
 		<img src={artistsDecor} alt="Artists decoration" class="absolute z-0 h-96 w-auto" />
 		<h1 class="relative z-10 w-full text-center text-7xl font-bold text-white">
 			{content.artistsTitle}
 		</h1>
 	</div>
-	<div class="translate-y-[20%]">
+	<div class="mt-16">
 		<p class="mb-8 text-lg text-offblack">
 			{@html content.artistsContent}
 		</p>
