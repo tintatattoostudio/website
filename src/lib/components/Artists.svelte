@@ -11,7 +11,7 @@
 <div id="artists" class="mx-12 my-4 flex translate-y-[20%] flex-col gap-8">
 	<div class="relative flex items-center justify-center">
 		<img src={artistsDecor} alt="Artists decoration" class="absolute z-0 h-96 w-auto" />
-		<h1 class="relative z-10 w-full text-center font-serif text-7xl font-bold text-white">
+		<h1 class="relative z-10 w-full text-center text-7xl font-bold text-white">
 			{content.artistsTitle}
 		</h1>
 	</div>
