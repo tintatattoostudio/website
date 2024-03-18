@@ -53,9 +53,9 @@
 	</a>
 	<div>
 		<Carousel
-			class="h-64 sm:h-64 xl:h-96 2xl:h-96"
+			class="h-64 bg-offblack/30 sm:h-64 xl:h-96 2xl:h-96"
 			images={getGalleryPreview()}
-			imgClass="h-full"
+			imgClass="h-full object-contain"
 			let:Controls
 			let:Indicators
 			transition={null}
