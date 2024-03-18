@@ -20,7 +20,7 @@
 	<Hero />
 	<!-- DESKTOP -->
 	<div
-		class="relative flex min-h-[100vh] flex-col items-center justify-start overflow-hidden bg-gray-100 max-[1606px]:min-h-[110vh] max-[1103px]:min-h-[120vh] max-[712px]:hidden"
+		class="relative flex min-h-[115vh] flex-col items-center justify-start overflow-hidden bg-gray-100 max-[1606px]:min-h-[125vh] max-[1103px]:min-h-[135vh] max-[712px]:hidden"
 	>
 		<img
 			src={decorBg}
