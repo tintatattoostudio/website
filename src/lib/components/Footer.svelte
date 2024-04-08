@@ -17,18 +17,18 @@
 		<br />
 		<div class="flex flex-row items-center justify-center gap-4">
 			<a
-				class="transition-all duration-150 hover:font-bold"
+				class="transition-all duration-200 hover:font-bold"
 				href="https://www.instagram.com/tinta_tattoostudio/"
 				target="_blank"
-				><img src={ig} alt="Instagram logo" class="h-8 transition-all duration-150 hover:h-10" /></a
+				><img src={ig} alt="Instagram logo" class="h-8 transition-all duration-200 hover:h-10" /></a
 			>
 			<a
-				class="transition-all duration-150 hover:font-bold"
+				class="transition-all duration-200 hover:font-bold"
 				href="https://www.facebook.com/profile.php?id=61554577949770"
 				target="_blank"
-				><img src={fb} alt="Instagram logo" class="h-8 transition-all duration-150 hover:h-10" /></a
+				><img src={fb} alt="Instagram logo" class="h-8 transition-all duration-200 hover:h-10" /></a
 			>
-			<!-- <a class="transition-all duration-150 hover:font-bold" href="">tiktok</a> -->
+			<!-- <a class="transition-all duration-200 hover:font-bold" href="">tiktok</a> -->
 		</div>
 	</div>
 	<div class="px-20">
