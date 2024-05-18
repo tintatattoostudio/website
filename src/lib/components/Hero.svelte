@@ -14,6 +14,10 @@
 		studio10,
 		studio11,
 		studio12,
+		studio13,
+		studio14,
+		studio15,
+		studio16,
 	} from '$lib/assets/images/studio';
 
 	const images = [
@@ -77,12 +81,32 @@
 			src: studio12,
 			title: 'studio12',
 		},
+		{
+			alt: 'Studio 13',
+			src: studio13,
+			title: 'studio13',
+		},
+		{
+			alt: 'Studio 14',
+			src: studio14,
+			title: 'studio14',
+		},
+		{
+			alt: 'Studio 15',
+			src: studio15,
+			title: 'studio15',
+		},
+		{
+			alt: 'Studio 16',
+			src: studio16,
+			title: 'studio16',
+		},
 	];
 </script>
 
 <div class="h-5/6 p-2">
 	<Carousel
-		class="h-[65vh] sm:h-[65vh] xl:h-[65vh] 2xl:h-[65vh]"
+		class="h-[75vh] sm:h-[75vh] xl:h-[75vh] 2xl:h-[75vh]"
 		{images}
 		imgClass="h-full"
 		let:Controls

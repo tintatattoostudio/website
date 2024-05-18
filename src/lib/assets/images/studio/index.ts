@@ -10,3 +10,7 @@ export { default as studio9 } from './studio9.jpg';
 export { default as studio10 } from './studio10.jpg';
 export { default as studio11 } from './studio11.jpg';
 export { default as studio12 } from './studio12.jpg';
+export { default as studio13 } from './studio13.jpg';
+export { default as studio14 } from './studio14.jpg';
+export { default as studio15 } from './studio15.jpg';
+export { default as studio16 } from './studio16.jpg';
