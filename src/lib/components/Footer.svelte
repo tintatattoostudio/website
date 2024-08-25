@@ -9,7 +9,7 @@
 >
 	<div class="mt-4 flex flex-col items-start justify-center">
 		<img src={logo} class="h-auto max-h-96" alt="Tinta logo" />
-		<p class="text-2xl text-black">Karingerjeva ulica 8, 1000 Ljubljana</p>
+		<p class="text-2xl text-black">Trubarjeva cesta 28, 1000 Ljubljana</p>
 		<br />
 		<p class="text-2xl text-black">
 			<a href="mailto:tattoostudio.tinta@gmail.com">tattoostudio.tinta@gmail.com</a>
