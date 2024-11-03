@@ -15,9 +15,6 @@
 		studio11,
 		studio12,
 		studio13,
-		studio14,
-		studio15,
-		studio16,
 	} from '$lib/assets/images/studio';
 
 	const images = [
@@ -87,20 +84,10 @@
 			title: 'studio13',
 		},
 		{
-			alt: 'Studio 14',
-			src: studio14,
-			title: 'studio14',
-		},
-		{
-			alt: 'Studio 15',
-			src: studio15,
-			title: 'studio15',
-		},
-		{
-			alt: 'Studio 16',
-			src: studio16,
-			title: 'studio16',
-		},
+			alt: 'Studio 13',
+			src: studio13,
+			title: 'studio13',
+		}
 	];
 </script>
 
