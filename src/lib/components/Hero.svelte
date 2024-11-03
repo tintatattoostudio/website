@@ -99,7 +99,7 @@
 		let:Controls
 		let:Indicators
 		transition={null}
-		duration={10000}
+
 	>
 		<Indicators />
 		<Controls />
