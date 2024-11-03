@@ -24,8 +24,8 @@ export default class API {
 		return PUBLIC_API_URL + url;
 	}
 	
-	static async getArtistGallery(artist: string, en: boolean) {
-		const locale = en ? '&locale=en' : '';
+	static async getArtistGallery(artist: string, loc: string) {
+		const locale = `&locale=${loc}`;
 		const data = await axiosInstance.get<{ data: Artist[] }>(
 			`/galleries?filters[artist][$eq]=${artist}&populate=deep${locale}`,
 		);
@@ -33,36 +33,36 @@ export default class API {
 		return data.data.data.at(0);
 	}
 	
-	static async getFAQ(en: boolean): Promise<FAQSection[]> {
-		const locale = en ? '&locale=en' : '';
+	static async getFAQ(loc: string): Promise<FAQSection[]> {
+		const locale = `&locale=${loc}`;
 		const data = await axiosInstance.get<FAQ>(`/faq?populate=deep${locale}`);
 	
 		return data.data.data.attributes.section;
 	}
 	
-	static async getCare(en: boolean): Promise<Care> {
-		const locale = en ? '&locale=en' : '';
+	static async getCare(loc: string): Promise<Care> {
+		const locale = `&locale=${loc}`;
 		const data = await axiosInstance.get<CareBase>(`/care?populate=deep${locale}`);
 	
 		return data.data.data.attributes;
 	}
 	
-	static async getInstructions(en: boolean): Promise<Instructions> {
-		const locale = en ? '&locale=en' : '';
+	static async getInstructions(loc: string): Promise<Instructions> {
+		const locale = `&locale=${loc}`;
 		const data = await axiosInstance.get<InstructionsBase>(`/pretattoo?populate=deep${locale}`);
 	
 		return data.data.data.attributes;
 	}
 	
-	static async getLanding(en: boolean): Promise<Landing> {
-		const locale = en ? '?locale=en' : '';
+	static async getLanding(loc: string): Promise<Landing> {
+		const locale = `?locale=${loc}`;
 		const data = await axiosInstance.get<LandingBase>(`/landing${locale}`);
 	
 		return data.data.data.attributes;
 	}
 	
-	static async getArtists(en: boolean): Promise<Artist[]> {
-		const locale = en ? '&locale=en' : '';
+	static async getArtists(loc: string): Promise<Artist[]> {
+		const locale = `&locale=${loc}`;
 		const data = await axiosInstance.get<{ data: Artist[] }>(`/galleries?populate=deep${locale}`);
 	
 		return data.data.data;

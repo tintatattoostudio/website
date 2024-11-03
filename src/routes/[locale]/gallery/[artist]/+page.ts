@@ -4,7 +4,7 @@ import API from '$lib/api/client';
 
 export const load: PageLoad = async ({ params }) => {
 	if (params.artist) {
-		const artist = await API.getArtistGallery(params.artist, true);
+		const artist = await API.getArtistGallery(params.artist, params.locale);
 
 		return {
 			artist,

@@ -1,33 +1,29 @@
 <script lang="ts">
 	import '../app.pcss';
 	import logo from '$lib/assets/logo.png';
-	import routes from '$lib/routes';
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
+	import type { LayoutData } from './$types';
+	import getRoutes from '$lib/routes';
+	import { t, locale } from '$lib/translations';
+	import { pathWithoutLocale } from '$lib/utils';
 
-	function setLocale(locale: string) {
-		window.localStorage.setItem('locale', locale);
-		goto(locale === 'en' ? '/en' : '/sl');
-		if (locale === 'en') isEng = true;
-		if (locale === 'sl') isEng = false;
+	function setLocale(newLocale: string, pathname: string) {
+		window.localStorage.setItem('locale', newLocale);
+		locale.set(newLocale);
+		const path = pathWithoutLocale(pathname);
+
+		window.location.replace(`/${newLocale}${path ?? ''}`);
 	}
 
 	onMount(() => {
-		const current = window.localStorage.getItem('locale');
-		if (current === 'en') {
-			isEng = true;
-			goto('/en');
-		} else {
-			goto('/sl');
-		}
-
 		setInterval(() => (loading = false), 3000);
 	});
 
-	let isEng = false;
 	let loading = true;
 
 	const year = new Date().getFullYear();
+	const routes = getRoutes(locale.get());
+	export let data: LayoutData;
 </script>
 
 <svelte:head>
@@ -50,12 +46,14 @@
 		>
 			<img src={logo} alt="Tinta Tattoo Logo" width="350" />
 			<div class="mt-4 w-24">
-				<button on:click={() => setLocale('sl')} class="transition-all duration-200 hover:font-bold"
-					>SLO</button
+				<button
+					on:click={() => setLocale('sl', window.location.pathname)}
+					class="transition-all duration-200 hover:font-bold">SLO</button
 				>
 				|
-				<button on:click={() => setLocale('en')} class="transition-all duration-200 hover:font-bold"
-					>ENG</button
+				<button
+					on:click={() => setLocale('en', window.location.pathname)}
+					class="transition-all duration-200 hover:font-bold">ENG</button
 				>
 			</div>
 		</div>
@@ -65,9 +63,8 @@
 		>
 			<div class="px-18 flex w-[90%] flex-row items-center justify-evenly text-gray-700">
 				{#each routes as route, i}
-					<a
-						class="text-center transition-all duration-200 hover:font-bold"
-						href={isEng ? route.linkEng : route.link}>{isEng ? route.nameEng : route.name}</a
+					<a class="text-center transition-all duration-200 hover:font-bold" href={route.link}
+						>{$t(route.name)}</a
 					>
 					{#if i < routes.length - 1}
 						<p class="mx-2">|</p>
@@ -79,7 +76,7 @@
 	<slot />
 	<footer class="flex flex-row items-center justify-center bg-black p-4 text-white">
 		<p>
-			Tinta Tattoo © {year} | {isEng ? 'Maintained by' : 'Vzdržuje'}
+			Tinta Tattoo © {year} | {$t('common.footer.maintenance')}
 			<a href="https://aerio.tech">Aerio</a>
 		</p>
 	</footer>

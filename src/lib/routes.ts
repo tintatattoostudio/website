@@ -1,28 +1,23 @@
-const routes = [
-	{
-		name: 'O nas',
-		nameEng: 'About',
-		link: '/sl',
-		linkEng: '/en/',
-	},
-	{
-		name: 'Nega',
-		nameEng: 'Care ',
-		link: '/sl/care',
-		linkEng: '/en/care',
-	},
-	{
-		name: 'Napotki',
-		nameEng: 'Instructions',
-		link: '/sl/instructions',
-		linkEng: '/en/instructions',
-	},
-	{
-		name: 'FAQ',
-		nameEng: 'FAQ',
-		link: '/sl/faq',
-		linkEng: '/en/faq',
-	},
-];
+function getRoutes(locale: string) {
+	console.log(locale);
+	return [
+		{
+			name: "common.navigation.about",
+			link: `/${locale}`,
+		},
+		{
+			name: 'common.navigation.care',
+			link: `/${locale}/care`,
+		},
+		{
+			name: 'common.navigation.instructions',
+			link: `/${locale}/instructions`,
+		},
+		{
+			name: 'common.navigation.faq',
+			link: `/${locale}/faq`,
+		},
+	];
+}
 
-export default routes;
+export default getRoutes;

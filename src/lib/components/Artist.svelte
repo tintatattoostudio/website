@@ -2,19 +2,10 @@
 	import { goto } from '$app/navigation';
 	import API from '$lib/api/client';
 	import type { Artist } from '$lib/api/types';
+	import { locale } from '$lib/translations';
 	import { Carousel } from 'flowbite-svelte';
 	import { onMount } from 'svelte';
 	import type { HTMLImgAttributes } from 'svelte/elements';
-
-	onMount(() => {
-		const current = window.localStorage.getItem('locale');
-		if (current === 'en') {
-			isEng = true;
-			goto('/en');
-		} else {
-			goto('/sl');
-		}
-	});
 
 	function getGalleryPreview() {
 		const images: HTMLImgAttributes[] = [];
@@ -32,13 +23,12 @@
 		return images;
 	}
 
-	let isEng = false;
 	export let artist: Artist;
 </script>
 
 <div>
 	<a
-		href={`/${isEng ? 'en' : 'sl'}/gallery/${artist.attributes.artist}`}
+		href={`/${locale.get()}/gallery/${artist.attributes.artist}`}
 		class="mb-4 flex flex-col items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-1 hover:scale-105 hover:cursor-pointer hover:opacity-80"
 	>
 		<img

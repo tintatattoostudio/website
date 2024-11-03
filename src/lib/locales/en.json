@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "about": "About",
+    "care": "Care",
+    "instructions": "Instructions",
+    "faq": "FAQ"
+  },
+  "footer": {
+    "maintenance": "Maintained by"
+  }
+}
