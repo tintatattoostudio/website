@@ -16,9 +16,6 @@
 		const current = window.localStorage.getItem('locale');
 		if (current === 'en') {
 			isEng = true;
-			goto('/en');
-		} else {
-			goto('/sl');
 		}
 
 		setInterval(() => (loading = false), 3000);
