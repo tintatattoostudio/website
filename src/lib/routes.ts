@@ -19,7 +19,7 @@ const routes = [
 	},
 	{
 		name: 'Cenik',
-		nameEng: 'Price List',
+		nameEng: 'Pricing',
 		link: '/sl/prices',
 		linkEng: '/en/prices',
 	},
