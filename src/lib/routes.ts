@@ -1,5 +1,4 @@
 function getRoutes(locale: string) {
-	console.log(locale);
 	return [
 		{
 			name: "common.navigation.about",

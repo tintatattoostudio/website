@@ -2,14 +2,21 @@
 	import '../app.pcss';
 	import logo from '$lib/assets/logo.png';
 	import { onMount } from 'svelte';
-	import type { LayoutData } from './$types';
+	// import type { LayoutData } from './$types';
 	import getRoutes from '$lib/routes';
 	import { t, locale } from '$lib/translations';
 	import { pathWithoutLocale } from '$lib/utils';
 
-	function setLocale(newLocale: string, pathname: string) {
+	async function setLocale(newLocale: string, pathname: string) {
 		window.localStorage.setItem('locale', newLocale);
 		locale.set(newLocale);
+		await fetch('/locale', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ locale: newLocale }),
+    });
 		const path = pathWithoutLocale(pathname);
 
 		window.location.replace(`/${newLocale}${path ?? ''}`);
@@ -23,7 +30,7 @@
 
 	const year = new Date().getFullYear();
 	const routes = getRoutes(locale.get());
-	export let data: LayoutData;
+	// export let data: LayoutData;
 </script>
 
 <svelte:head>
