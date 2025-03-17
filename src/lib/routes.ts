@@ -18,6 +18,12 @@ const routes = [
 		linkEng: '/en/instructions',
 	},
 	{
+		name: 'Cenik',
+		nameEng: 'Price List',
+		link: '/sl/prices',
+		linkEng: '/en/prices',
+	},
+	{
 		name: 'FAQ',
 		nameEng: 'FAQ',
 		link: '/sl/faq',
